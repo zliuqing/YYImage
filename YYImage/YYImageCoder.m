@@ -2356,6 +2356,8 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         } break;
         case YYImageTypeWebP: {
             _quality = 0.8;
+            //add this line to fix png to webp crash
+            _lossless = YES;
         } break;
         default:
             break;
